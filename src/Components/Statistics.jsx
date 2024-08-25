@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 
 const Statistics = (props) => {
     return (
-    <p>{props.label} {props.stats}</p>
-    )
+    <p>{props.label} {props.stats} </p>
+    ) 
 }
 
 Statistics.propTypes = {

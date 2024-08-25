@@ -29,12 +29,20 @@ const App = () => {
       <Button handleClick={handleNeutral} text={'Neutral'}/>
       <Button handleClick={handleBad} text={'Bad'}/>
       <Header text={'statistics'} />
+      {allFeedback > 0 ?  (
+      <>
       <Statistics label={'good'} stats={good}/>
       <Statistics label={'neutral'} stats={neutral}/>
       <Statistics label={'bad'} stats={bad}/>
       <Statistics label={'all'} stats={allFeedback}/>    
       <Statistics label={'avg'} stats={average} />
       <Statistics label={'positive'} stats={positivePercentage}/>
+      </>
+      ) : (
+        <p>No feedback given</p>
+      )}
+
+
     </>
   )
 }
