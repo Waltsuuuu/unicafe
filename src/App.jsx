@@ -22,6 +22,8 @@ const App = () => {
   const handleNeutral = () => setNeutral(neutral + 1)
   const handleBad = () => setBad(bad +1)
 
+  console.log(good)
+
   return (
     <>
       <Header text={'give feedback'}/>
@@ -31,18 +33,18 @@ const App = () => {
       <Header text={'statistics'} />
       {allFeedback > 0 ?  (
       <>
-      <Statistics label={'good'} stats={good}/>
-      <Statistics label={'neutral'} stats={neutral}/>
-      <Statistics label={'bad'} stats={bad}/>
-      <Statistics label={'all'} stats={allFeedback}/>    
-      <Statistics label={'avg'} stats={average} />
-      <Statistics label={'positive'} stats={positivePercentage}/>
+      <Statistics 
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          allFeedback={allFeedback}
+          average={average}
+          positivePercentage={positivePercentage}
+      />
       </>
       ) : (
         <p>No feedback given</p>
       )}
-
-
     </>
   )
 }
