@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 
 const StatisticLine = ({ text, value }) => {
     return (
-      <div>
-        <strong>{text}</strong>:{value}
-      </div>
+    <tr>
+        <td>{text}</td>
+        <td>{value}</td>
+    </tr>
     )
   }
 
